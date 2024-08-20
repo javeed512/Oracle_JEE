@@ -3,6 +3,7 @@ package servletchaining;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -56,7 +57,9 @@ public class PaymentServlet extends HttpServlet {
 			out.print("<h1>Your Total Bill Amount is: "+ amount  +" </h1>");
 		
 			
-			
+			  RequestDispatcher rd = request.getRequestDispatcher("/views/success.html");
+			  
+			  rd.include(request, response);
 				
 			
 	}

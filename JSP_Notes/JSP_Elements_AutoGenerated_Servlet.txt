@@ -1,0 +1,103 @@
+
+
+JSP Elements or Tags:
+----------------------
+
+1. JSP Template  (text or html)
+2. JSP Scriplet     <%   any java code  %>
+3. JSP  Expression   <%=  print java variables  %>
+4. JSP Declaration   <%!   any java code  %>
+5. JSP ACTION Tags  <jsp:tagName>
+6. JSP Directives  <%@ page   %>
+
+
+
+
+
+
+
+
+Note: For every JSP Page one Auto-Generated Servlet will be created by server.
+
+
+Hello.jsp
+---------
+
+
+
+Auto-Generated Servlet:
+-----------------------
+Hello_Servlet.java
+------------------
+public class  Hello_Servlet  extends HttpServlet{
+
+
+
+
+	jspInit(){
+
+	
+
+
+
+
+
+	}
+
+	jspService(){
+
+	PrintWriter out;
+	HttpServletRequest request;
+	HttpServletResponse response;
+	HttSession session;
+	ServletContext application;
+
+		out.print("<h1>WELCOME TO HTML</h1>");
+		out.print(" Hi Friends!");
+
+			int x = 99;
+	 
+	 	out.print("<br>");
+	 
+	 	out.print(x );
+	 
+	 LocalDateTime  dt =	LocalDateTime.now();
+	 
+		out.print("<br>");
+	 	out.print("Date "+dt);
+
+	}
+
+
+	jspDestroy(){
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
