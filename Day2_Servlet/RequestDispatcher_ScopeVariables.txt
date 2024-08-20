@@ -1,0 +1,63 @@
+
+For inter-servlet communication.
+
+1. Get RequestDispatcher object
+
+ RequestDispatcher   rd  = request.getRequestDispatcher("resource-name");
+ RequestDispatcher   rd  =  application.getRequestDispatcher("resource-name");
+		
+resource-name:   servlet , jsp page , html page
+
+RequestDispatcher  interface:
+
+  include(request,response); // it includes output of all the resources from begining to end
+  forward(request,response);  // it just displays only last resource output 
+
+
+
+Scope Variables or Objects:
+============================
+In Servlet and JSP we have 3 scope variables:
+
+1. HttpServletRequest request;   // with in servlet or request
+
+2. HttpSession  session;         
+			 // user specific data is stored , scope is untill user logout from app
+3. ServletContext  context or application;  
+			// here we store web application specific data 
+
+setting or storing data in scopes
+-----------------------------------
+scope_var.setAttribute("key",value-any-data);
+
+Ex: session.setAttribute("amount", 90000);
+
+
+getting data from scopes
+---------------------------
+  Object obj  = scope_var.getAttribute("key");
+
+Ex: Object obj =    session.getAttribute("amount");
+
+	Integer  amount = (Integer)  obj;
+
+
+ removing data from scopes:
+----------------------------
+   scope_var.removeAttribute("key");
+
+Ex:  session.removeAttribute("amount");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
