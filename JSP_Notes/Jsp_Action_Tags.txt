@@ -1,0 +1,41 @@
+
+
+JSP Action Tags:
+----------------
+
+
+<jsp:include  page="resource-name">
+
+<jsp:forward  page="resource-name">
+
+
+----------------------------------------------------------------------
+
+<jsp:useBean id="emp" class="beans.Employee"  scope="session/request/page/application"></jsp:useBean>
+ 
+<jsp:setProperty property="eid" name="emp"   param="eid"/>
+<jsp:setProperty property="ename" name="emp"   param="ename"/>
+<jsp:setProperty property="salary" name="emp"   param="salary"/>
+
+
+<jsp:include page="/views/success.jsp"></jsp:include>
+
+-------------------------------------------------------------------------------
+
+
+
+Emp Details using Jsp getProperty Action Tag: <br>
+
+<jsp:useBean  id="emp"  class="beans.Employee"  scope="session"></jsp:useBean>
+<jsp:getProperty property="eid" name="emp"/>
+<jsp:getProperty property="ename" name="emp"/>
+<jsp:getProperty property="salary" name="emp"/>
+
+
+
+
+
+
+
+
+
