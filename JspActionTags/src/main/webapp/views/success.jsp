@@ -1,4 +1,4 @@
-<%@ page    import="beans.*" language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page   isELIgnored="false"   import="beans.*" language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
@@ -9,6 +9,7 @@
 <body>
 
 <h1>EMPLOYEE DETAILS</h1>
+Display emp using scriptlet and getterm methods
 <% 
 
 	Employee emp1  = (Employee) session.getAttribute("emp");
@@ -19,6 +20,17 @@
 %>
 
 <br>
+Display emp using JSP Exp:
+<%=   session.getAttribute("emp") %>
+
+<br>
+
+
+Display emp using EL-Exp :
+${ emp }
+
+
+<BR>
 
 Emp Details using Jsp getProperty Action Tag: <br>
 

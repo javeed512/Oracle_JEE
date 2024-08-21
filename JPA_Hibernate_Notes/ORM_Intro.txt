@@ -1,0 +1,99 @@
+Database:
+To store data permanent in tabular format.
+
+JDBC - Java Database Connectivity
+
+JDBC API  (interfaces,classes , methods)
+
+com.mysql.jdbc ---> mysql.jar
+
+com.oracle.jdbc ----> ojdbc_x.jar
+
+In JDBC
+1. Create table explicitly / manually 
+2. register some driver class
+3. get data base connect using URL , username , password
+4. write SQL DML  or SELECT 
+5. execute()  , executes queries
+6. close connection
+
+
+Java OOPs
+
+int 
+String
+long
+java.time.LocalDate
+java.sql.Date
+
+class   Address{
+
+	String city;
+	String state;
+
+}
+
+class Employee  extends Object{ //Inheritance
+
+	int eid;
+	String ename;
+	double salary;
+
+	Address address;
+
+	List<Address>  listAddress;
+
+}
+ 
+ Employee emp = new Employee(); // 0 , null , 0.0
+
+	emp.setEid(111);   emp.setEname("tom");   // 111  , tom , 0.0
+
+	emp is deleted
+
+Employee e1 = new Employee(101,"king",5000,new Address("hyd","TS"))
+  Employee@1245abe
+
+SQL  RDBMS
+integer
+varchar
+date 
+
+
+
+
+
+Address_Table
+
+Aid(p.k)  City  State
+4 records
+
+
+Employee_Table
+Eid    Ename  Salary   Aid(F.K)
+8 records
+
+
+select * from Employee_Table;
+
+
+
+Hibernate Framework(ORM Tool)
+
+Framework --> set of APIs
+JDBC API , JPA API , JTA API ....
+
+Object - Relational - Mapping
+
+
+
+
+
+
+
+
+
+
+
+
+
