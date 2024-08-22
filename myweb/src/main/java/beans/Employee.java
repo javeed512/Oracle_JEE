@@ -1,19 +1,13 @@
-package com.oracle.jpa.entity;
-
-import java.io.Serializable;
+package beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Emp_Info")
-
-@NamedQueries(@NamedQuery(name= "getAllEmployees" , query = "select e from Employee e"))
-public class Employee  implements Serializable {
+@Table(name="Emp_Web")
+public class Employee {
 	
 	@Id
 	@Column(name="emp_id")
