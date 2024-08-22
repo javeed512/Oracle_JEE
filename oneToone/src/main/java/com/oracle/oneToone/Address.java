@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Address implements Serializable {
@@ -28,6 +29,21 @@ public class Address implements Serializable {
 	@Column(name="ADDRESS_ZIPCODE")
 	private String zipCode;
 	
+	//to create bi-directional relationship, use one to one with mappedBy 
+		//mappedBy attribute indicates property name of owner i.e. Student class
+	
+	@OneToOne(mappedBy = "address")
+	private Student  student;
+	
+	
+	
+	
+	public Student getStudent() {
+		return student;
+	}
+	public void setStudent(Student student) {
+		this.student = student;
+	}
 	public int getAddressId() {
 		return addressId;
 	}
@@ -58,6 +74,17 @@ public class Address implements Serializable {
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
+	@Override
+	public String toString() {
+		return "Address [addressId=" + addressId + ", street=" + street + ", city=" + city + ", state=" + state
+				+ ", zipCode=" + zipCode + ", student=" + student + "]";
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 }

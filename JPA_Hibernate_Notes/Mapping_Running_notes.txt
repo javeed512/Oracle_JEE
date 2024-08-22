@@ -1,0 +1,92 @@
+SQL:
+-------
+Table
+Emp_Info
+
+
+Columns
+emp_id , emp_name , salary
+
+
+SQL:   Select emp_id,emp_name , salary from Emp_Info where emp_name = 'tom';
+
+
+JPQL/HQL:
+---------
+Entity class
+
+Employee class
+
+
+Properties
+eid
+ename
+salary
+
+JPQL:  select   e.eid , e.ename , e.salary  from  Employee e where e.eid = ?;
+
+
+
+
+
+
+JPQL:  select  b.id , b.title , b.price    from  Book  b  where  b.author = 'jim kathy';
+
+
+
+
+
+
+
+
+
+
+Mapping:
+
+
+class Address{
+
+ int aid;
+ String city;
+ 
+
+}
+
+
+class  Student{
+
+
+ int id;
+ String sname;
+
+ @OneToOne(cascade=PERSIST,fetch=LAZY)
+ Address address;           // HAS A Relationship
+ List<Address>  address;
+
+
+}
+
+Address a1 = new Address(.......)
+Student  s1 = new Student(..... , a1);
+
+	persist(s1); 
+
+Student s =	em.find(101);  --->  em.find(45)
+
+  s.getAddress();  ----> em.find(45)
+
+em.remove(s1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
