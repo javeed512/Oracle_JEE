@@ -1,0 +1,78 @@
+
+ 
+
+
+ Important Annotation used in Spring framework and webservices:
+----------------------------------------------------------------
+
+Following annotations are used by Spring to generate objects for given class.
+
+ @RestController (web)  : it is for web services/rest api controllers
+
+ @Service   : for service classes we use it
+ @Repository  : it is used for DAO / Repository classes
+
+ @Component   : it can be used for any java class
+
+ @Entity : it is used for entity classes
+
+
+
+@Component
+class   Employee{        // new Employee();
+
+
+
+}
+
+class  Test {
+	
+	@Autowired
+	Employee e1;
+
+		e1.getEid();
+
+
+
+}
+
+
+
+
+
+REST API related annotations in spring:
+
+ @RestController 
+
+ @RequestMapping : it is to map base url of any controller class	
+
+ @GetMapping:  it is used for resource/method which need to executes on get request from client
+		it is used to get  any data from webeservices. just like select/fetch query
+
+	
+ @PostMapping:  it is used for resource/method which need to executes on post request from client
+		it is used to post/insert data in webservices. just like create/insert record 
+
+
+
+ @PutMapping:  it is used for resource/method which need to executes on put request from client
+		it is used to put/update data on webservices. just like update record 
+
+
+
+ @DeleteMapping:  it is used for resource/method which need to executes on delete request from client
+ 		it is used to delete/remove data from webservices. just like delete record 
+
+	
+
+ @PathVariable: it is used to read data from URI path
+
+		ex:  localhost:8080/api/hello/name="javeed"
+
+
+ @RequestBody: it is used by post and put , this annotation help us to read data from RequestBody for 			given request
+
+
+
+
+
